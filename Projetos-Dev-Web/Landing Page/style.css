@@ -127,6 +127,15 @@ body{
     .menu{
         display: block;
     }
+    .menu.ativo .bar:nth-child(1){ /*filhos do scriptjs*/
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
     .navi-menu{
         position: fixed;
         right: -100%;
@@ -138,8 +147,20 @@ body{
         gap: -10px;
         transition: 0.3;
     }
+    .navi-menu .ativo{
+        right: 0;
+    }
     .navi-item{
         margin: 16px 0;
+    }
+    /*main*/
+
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        
     }
 }
 
